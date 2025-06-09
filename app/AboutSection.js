@@ -26,7 +26,7 @@ export default function AboutSection() {
 
       {/* Underline */}
       <motion.div
-        className="w-16 h-1 bg-white/60 mb-10 rounded"
+        className="w-16 h-1 bg-[var(--accent)] mb-10 rounded"
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
         transition={{ duration: 0.6, delay: 0.2 }}
@@ -66,15 +66,6 @@ export default function AboutSection() {
             </div>
           </div>
 
-          {/* Experience */}
-          <div className="flex items-start gap-4">
-            <span className="text-2xl mt-1" role="img" aria-label="briefcase">💼</span>
-            <div>
-              <div className="font-bold text-lg">Experience</div>
-              <div className="text-gray-200">Web Developer</div>
-              <div className="text-gray-400 text-sm">Fresh Graduate</div>
-            </div>
-          </div>
 
           {/* Focus */}
           <div className="flex items-start gap-4">

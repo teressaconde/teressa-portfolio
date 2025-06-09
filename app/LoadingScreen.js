@@ -42,14 +42,14 @@ export default function LoadingScreen() {
       }`}
     >
       {/* Corner Accents */}
-      <div className="absolute top-0 left-0 w-16 h-16 border-t-4 border-l-4 border-blue-400 rounded-tl-lg" />
-      <div className="absolute top-0 right-0 w-16 h-16 border-t-4 border-r-4 border-pink-400 rounded-tr-lg" />
-      <div className="absolute bottom-0 left-0 w-16 h-16 border-b-4 border-l-4 border-pink-400 rounded-bl-lg" />
-      <div className="absolute bottom-0 right-0 w-16 h-16 border-b-4 border-r-4 border-blue-400 rounded-br-lg" />
+      <div className="absolute top-0 left-0 w-16 h-16 border-t-4 border-l-4 border-[var(--accent)] rounded-tl-lg" />
+      <div className="absolute top-0 right-0 w-16 h-16 border-t-4 border-r-4 border-[var(--accent)] rounded-tr-lg" />
+      <div className="absolute bottom-0 left-0 w-16 h-16 border-b-4 border-l-4 border-[var(--accent)] rounded-bl-lg" />
+      <div className="absolute bottom-0 right-0 w-16 h-16 border-b-4 border-r-4 border-[var(--accent)] rounded-br-lg" />
 
       {/* Glowing Icon */}
       <div className="relative mb-8">
-        <div className="w-28 h-28 rounded-full bg-gradient-to-br from-blue-500 to-pink-500 flex items-center justify-center shadow-2xl animate-glow">
+        <div className="w-28 h-28 rounded-full bg-gradient-to-br from-[var(--accent)] to-[#6d3bbd] flex items-center justify-center shadow-2xl animate-glow">
           <svg
             width="48"
             height="48"
@@ -67,16 +67,16 @@ export default function LoadingScreen() {
       </div>
 
       {/* Name and Subtitle */}
-      <h1 className="text-3xl md:text-5xl font-bold mb-2 text-center bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-        Dexter <span className="text-pink-400">Miranda</span>
-      </h1>
+      <h1 className="text-3xl md:text-5xl font-bold mb-2 text-center bg-gradient-to-r from-[var(--accent)] via-[#b47aff] to-[#6d3bbd] bg-clip-text text-transparent">
+        Dexter <span className="text-[var(--accent)]">Miranda</span>
+      </h1> 
       <p className="text-lg md:text-xl text-gray-200 mb-8 text-center font-mono tracking-wide">
         Full Stack Developer
       </p>
 
       {/* Progress Bar */}
       <div className="w-72 max-w-full mb-4">
-        <div className="h-2 rounded-full bg-gradient-to-r from-blue-400 to-pink-400 relative overflow-hidden">
+        <div className="h-2 rounded-full bg-gradient-to-r from-[var(--accent)] to-[#6d3bbd] relative overflow-hidden">
           <div
             className="absolute left-0 top-0 h-2 bg-white/40"
             style={{
@@ -88,7 +88,7 @@ export default function LoadingScreen() {
       </div>
 
       {/* Percentage */}
-      <div className="text-xl font-bold text-blue-300 mb-2">
+      <div className="text-xl font-bold text-[var(--accent)] mb-2">
         {Math.floor(percent)}%
       </div>
 
@@ -97,7 +97,7 @@ export default function LoadingScreen() {
         {[0, 1, 2].map((i) => (
           <span
             key={i}
-            className="w-3 h-3 bg-blue-400 rounded-full inline-block animate-bounce"
+            className="w-3 h-3 bg-[var(--accent)] rounded-full inline-block animate-bounce"
             style={{ animationDelay: `${i * 0.2}s` }}
           />
         ))}
@@ -106,16 +106,16 @@ export default function LoadingScreen() {
       {/* Embedded Styles */}
       <style jsx>{`
         .animate-glow {
-          box-shadow: 0 0 60px 10px #7f5af0, 0 0 120px 40px #ff6ac1;
+          box-shadow: 0 0 60px 10px #a259ff, 0 0 120px 40px #6d3bbd;
           animation: glow 2s alternate infinite;
         }
 
         @keyframes glow {
           0% {
-            box-shadow: 0 0 60px 10px #7f5af0, 0 0 120px 40px #ff6ac1;
+            box-shadow: 0 0 60px 10px #a259ff, 0 0 120px 40px #6d3bbd;
           }
           100% {
-            box-shadow: 0 0 80px 20px #7f5af0, 0 0 160px 60px #ff6ac1;
+            box-shadow: 0 0 80px 20px #a259ff, 0 0 160px 60px #6d3bbd;
           }
         }
       `}</style>
