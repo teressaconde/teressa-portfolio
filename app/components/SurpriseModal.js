@@ -292,10 +292,10 @@ export default function SurpriseModal({ isOpen, onClose }) {
                       My dearest love,
                     </p>
                     <p className="text-gray-600 dark:text-gray-400 mb-4">
-                      Eight years of beautiful memories, laughter, and love. You've been my rock, my inspiration, and my best friend. Every moment with you is a treasure I hold dear to my heart.
+                      Eight years of beautiful memories, laughter, and love. You&apos;ve been my rock, my inspiration, and my best friend. Every moment with you is a treasure I hold dear to my heart.
                     </p>
                     <p className="text-gray-600 dark:text-gray-400 mb-4">
-                      Thank you for being you, for loving me, and for making every day special. Here's to many more years of love and happiness together.
+                      Thank you for being you, for loving me, and for making every day special. Here&apos;s to many more years of love and happiness together.
                     </p>
                     <p className="text-gray-700 dark:text-gray-300 text-right">
                       Forever yours,<br />
