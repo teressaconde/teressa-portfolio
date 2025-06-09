@@ -30,10 +30,10 @@ const experiences = [
 export default function ExperienceSection() {
   return (
     <section id="experience" className="w-full min-h-[60vh] bg-[#18191A] px-4 md:px-24 py-20">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Experience</h2>
-      <div className="relative flex flex-col items-center">
+      <h2 className="text-3xl md:text-4xl font-bold text-left mb-12">Experience</h2>
+      <div className="relative flex flex-col items-start">
         {/* Vertical timeline line */}
-        <div className="absolute left-6 top-0 h-full w-1 bg-gradient-to-b from-transparent via-emerald-500/60 to-transparent rounded-full z-0" />
+        <div className="absolute left-2 top-0 h-full w-1 bg-gradient-to-b from-transparent via-emerald-500/60 to-transparent rounded-full z-0" />
         <div className="flex flex-col gap-12 w-full max-w-3xl z-10">
           {experiences.map((exp, idx) => (
             <motion.div
