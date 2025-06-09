@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import AboutSection from "./AboutSection";
+import ExperienceSection from "./ExperienceSection";
 
 const LoadingScreen = dynamic(() => import("./LoadingScreen"), { ssr: false });
 
@@ -27,6 +28,7 @@ export default function Home() {
         <div className="flex gap-8 text-lg font-bold">
           <a href="#home" className="hover:text-yellow-400 transition">HOME</a>
           <a href="#about" className="hover:text-yellow-400 transition">ABOUT</a>
+          <a href="#experience" className="hover:text-yellow-400 transition">EXPERIENCE</a>
         </div>
       </nav>
 
@@ -71,6 +73,8 @@ export default function Home() {
 
       {/* About Section */}
       <AboutSection />
+      {/* Experience Section */}
+      <ExperienceSection />
 
       {/* Optional: Subtle dots background */}
       <div className="pointer-events-none fixed inset-0 z-0">

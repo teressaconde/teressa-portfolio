@@ -43,13 +43,10 @@ export default function AboutSection() {
           transition={{ duration: 0.7, delay: 0.2 }}
         >
           <p>
-            I'm an Information Technology graduate from Cavite State University – Trece Martires Campus,
-            specializing in Web Development and Programming. I’m passionate about building efficient,
-            scalable web applications and exploring how AI can enhance development.
+            Information Technology graduate from Cavite State University - Trece Martires Campus specializing in Web Development and Programming. Passionate about creating efficient, scalable web applications and exploring the intersection of AI and development.
           </p>
           <p>
-            My development approach blends technical expertise with creative problem-solving, crafting
-            elegant solutions that balance form and function.
+            My approach combines technical expertise with creative problem-solving to deliver elegant solutions that balance form and function.
           </p>
         </motion.div>
 
