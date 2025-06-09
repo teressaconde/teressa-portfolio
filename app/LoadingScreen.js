@@ -55,23 +55,24 @@ export default function LoadingScreen() {
             height="48"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="white"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <polyline points="16 18 22 12 16 6" />
-            <polyline points="8 6 2 12 8 18" />
+            <path d="M12 2H8C6.34315 2 5 3.34315 5 5V8C5 9.65685 6.34315 11 8 11H12V2Z" fill="white"/>
+            <path d="M12 11H8C6.34315 11 5 12.3431 5 14V17C5 18.6569 6.34315 20 8 20H12V11Z" fill="white"/>
+            <path d="M19 5C19 3.34315 17.6569 2 16 2H12V11H16C17.6569 11 19 9.65685 19 8V5Z" fill="white"/>
+            <path d="M19 14C19 12.3431 17.6569 11 16 11H12V20H16C17.6569 20 19 18.6569 19 17V14Z" fill="white"/>
+            <path d="M12 11H16C17.6569 11 19 12.3431 19 14V17C19 18.6569 17.6569 20 16 20H12V11Z" fill="white"/>
           </svg>
         </div>
       </div>
 
       {/* Name and Subtitle */}
       <h1 className="text-3xl md:text-5xl font-bold mb-2 text-center bg-gradient-to-r from-[var(--accent)] via-[#b47aff] to-[#6d3bbd] bg-clip-text text-transparent">
-        Dexter <span className="text-[var(--accent)]">Miranda</span>
+        Teressa <span className="text-[var(--accent)]">Conde</span>
       </h1> 
       <p className="text-lg md:text-xl text-gray-200 mb-8 text-center font-mono tracking-wide">
-        Full Stack Developer
+        <span className="text-base font-normal text-gray-300 ml-2 light:text-gray-600">specializing in <span className="font-bold text-white light:text-[#18191A]">UI/UX Design</span>,</span>
+        <span className="text-base font-normal text-gray-300 ml-2 light:text-gray-600">crafting <span className="font-bold text-white light:text-[#18191A]">user-centered experiences</span></span>
       </p>
 
       {/* Progress Bar */}

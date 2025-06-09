@@ -34,19 +34,19 @@ export default function Home() {
         {/* Left: Text Content */}
         <div className="flex-1 flex flex-col items-start justify-center max-w-2xl">
           <h1 className="text-5xl md:text-6xl font-extrabold mb-4 leading-tight text-left">
-            Hi I&apos;m <span className="text-[var(--accent)]">Kurt!!</span>
+            Hi I&apos;m <span className="text-[var(--accent)]">Teressa!!</span>
           </h1>
           <div className="text-2xl md:text-3xl font-bold mb-2 text-left">
-            <span className="text-[var(--accent)]">Web Developer</span>
-            <span className="text-base font-normal text-gray-300 ml-2 light:text-gray-600">specializing in <span className="font-bold text-white light:text-[#18191A]">UI/UX design</span>,</span>
+            <span className="text-[var(--accent)]">UI/UX Designer</span>
+           
           </div>
           <div className="text-lg text-gray-400 mb-6 text-left light:text-gray-700">
-            creating responsive, user-friendly websites with cutting-edge technologies.
+          designing intuitive, responsive user interfaces and seamless experiences using modern design principles and tools.
           </div>
           {/* Tech Stack Badges */}
           <div className="flex flex-wrap gap-4 mt-4">
             {[
-              "Next.js", "ReactJS", "Laravel", "JavaScript", "TypeScript", "Git", "TailwindCSS", "Figma", "Photoshop", "Postman"
+              "Next.js", "ReactJS", "Laravel", "JavaScript", "TypeScript", "Git", "TailwindCSS", "Figma", "Photoshop", "Postman" , "Canva", "Firebase"
             ].map((tech) => (
               <span
                 key={tech}

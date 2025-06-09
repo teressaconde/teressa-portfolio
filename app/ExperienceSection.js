@@ -4,25 +4,33 @@ import { motion } from "framer-motion";
 const experiences = [
   {
     date: "2020",
-    title: "Customer Service Representative",
-    company: "iQor Philippines",
+    title: "Animation & Programming Intern",
+    company: "F-Squared Technologies Inc.",
     description:
-      "Customer Service Representative with a focus on providing exceptional support and solutions to customers.",
+      "I’ve been working at this company as an OJT (On-the-Job Training) student as part of my course requirements. During this time, we’ve been given two weeks to learn and explore the animation field and its industry, gaining valuable insights and hands-on experience.",
   },
   {
-    date: "Feb 2025 - May 2025",
-    title: "Frontend Developer Intern",
-    company: "ISPIR Center - Bulacan State University",
+    date: "2019 - Present",
+    title: "Design Editor",
+    company: "Dr. Santiago Dakudao Sr. National High School",
     description:
-      "Gained hands-on experience in frontend development, working with React Vite, TailwindCSS and API integration to create user-friendly web applications.",
+      "I have worked as a student assistant under DepEd, focusing on designing educational and administrative materials using Canva. I created layouts for ID cards, classroom visuals, and official documents, ensuring consistent and visually effective outputs. This role strengthened my skills in layout design, visual communication, and attention to detail within an academic setting.",
     readMore: true,
   },
   {
-    date: "June 2025",
-    title: "UI/UX Designer",
-    company: "Freelance",
+    date: "2024 - Present",
+    title: "Publication Material Editor",
+    company: "Freelance | Solumi, Tibungco, Davao City",
     description:
-      "Gained hands-on experience in frontend development, working with React Vite, TailwindCSS and API integration to create user-friendly web applications.",
+      "I currently work as a Publication Material Editor for a coffee shop located in Tibungco, Davao City. In this role, I am responsible for designing and editing various print and digital materials such as menus, promotional posters, and announcements. I collaborate closely with the shop’s management team to create visually appealing and brand-consistent content that effectively communicates promotions, events, and updates to customers.",
+    readMore: true,
+  },
+  {
+    date: "2021 - Present",
+    title: "Freelance Design Entrepreneur",
+    company: "Self-employed",
+    description:
+      "I currently work as a Publication Material Editor for a coffee shI run a small design business creating customized souvenirs and visual materials using Canva. I design invitations, ID cards, social media graphics, and branded items for various clients, strengthening my skills in layout design, branding, and client collaboration.",
     readMore: true,
   },
 ];

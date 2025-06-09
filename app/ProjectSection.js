@@ -18,9 +18,9 @@ export default function ProjectSection() {
           {/* Left: Project Info */}
           <div className="relative z-10 flex-1 max-w-xl text-white card p-6 rounded-xl shadow light:text-[#18191A]">
             <div className="mb-2 text-xs text-[var(--accent)] font-semibold">Frontend</div>
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-4 leading-tight light:text-[#18191A]">PASS COLLEGE OFFICIAL WEBSITE</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-4 leading-tight light:text-[#18191A]">Dummy Project</h2>
             <p className="mb-6 text-lg text-white/90 light:text-gray-900">
-              As part of my thesis, I developed an official website for Pass College, directly addressing their absence of a dedicated online presence beyond a Facebook page. This project involved creating a marketing platform to attract prospective students and implementing an efficient online document request system for current students. Key features include dynamic program showcases, news and events sections, a user-friendly content management system, and a secure student portal for document requests, significantly enhancing the college&apos;s communication and service capabilities.
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
             </p>
             <div className="flex flex-wrap gap-2 mb-6">
               {techs.map((tech) => (
