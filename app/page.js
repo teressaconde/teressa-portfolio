@@ -33,17 +33,17 @@ export default function Home() {
       </nav>
 
       {/* Main Section */}
-      <section className="flex flex-col md:flex-row items-center justify-between px-12 md:px-24 py-12 md:py-24 gap-12 md:gap-0">
+      <section className="flex flex-col md:flex-row items-center justify-between px-8 md:px-32 py-12 md:py-24 gap-12 md:gap-0">
         {/* Left: Text Content */}
         <div className="flex-1 flex flex-col items-start justify-center max-w-2xl">
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-4 leading-tight text-left">
             Hi I&apos;m <span className="text-gray-200">Kurt!!</span>
           </h1>
-          <div className="text-2xl md:text-3xl font-bold mb-2">
+          <div className="text-2xl md:text-3xl font-bold mb-2 text-left">
             <span className="text-yellow-400">Web Developer</span>
             <span className="text-base font-normal text-gray-300 ml-2">specializing in <span className="font-bold text-white">UI/UX design</span>,</span>
           </div>
-          <div className="text-lg text-gray-400 mb-6">
+          <div className="text-lg text-gray-400 mb-6 text-left">
             creating responsive, user-friendly websites with cutting-edge technologies.
           </div>
           {/* Tech Stack Badges */}
