@@ -12,7 +12,7 @@ const LoadingScreen = dynamic(() => import("./LoadingScreen"), { ssr: false });
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
-  const { toggleTheme } = useTheme();
+  const { toggleTheme, theme } = useTheme();
 
   useEffect(() => {
     // Show loading screen for the full animation duration (4s + 0.5s fade)
@@ -25,7 +25,7 @@ export default function Home() {
   if (loading) return <LoadingScreen />;
 
   return (
-    <div className="min-h-screen bg-[#18191A] text-white font-sans relative overflow-x-hidden">
+    <div className="min-h-screen bg-[#18191A] text-white font-sans relative overflow-x-hidden light:bg-[#fdf6ee] light:text-[#18191A]">
       {/* Navigation */}
       {/* Removed old header navigation */}
 
@@ -38,15 +38,20 @@ export default function Home() {
           </h1>
           <div className="text-2xl md:text-3xl font-bold mb-2 text-left">
             <span className="text-[var(--accent)]">Web Developer</span>
-            <span className="text-base font-normal text-gray-300 ml-2">specializing in <span className="font-bold text-white">UI/UX design</span>,</span>
+            <span className="text-base font-normal text-gray-300 ml-2 light:text-gray-600">specializing in <span className="font-bold text-white light:text-[#18191A]">UI/UX design</span>,</span>
           </div>
-          <div className="text-lg text-gray-400 mb-6 text-left">
+          <div className="text-lg text-gray-400 mb-6 text-left light:text-gray-700">
             creating responsive, user-friendly websites with cutting-edge technologies.
           </div>
           {/* Tech Stack Badges */}
           <div className="flex flex-wrap gap-4 mt-4">
-            {["Next.js", "ReactJS", "Laravel", "JavaScript", "TypeScript", "Git", "TailwindCSS", "Figma", "Photoshop", "Postman"].map((tech) => (
-              <span key={tech} className="bg-black/60 text-[var(--accent)] px-5 py-2 rounded-full text-base font-medium shadow-sm border border-[var(--accent)]/30 hover:bg-[#232323] transition">
+            {[
+              "Next.js", "ReactJS", "Laravel", "JavaScript", "TypeScript", "Git", "TailwindCSS", "Figma", "Photoshop", "Postman"
+            ].map((tech) => (
+              <span
+                key={tech}
+                className="badge bg-black/60 text-[var(--accent)] px-5 py-2 rounded-full text-base font-medium shadow-sm border border-[var(--accent)]/30 hover:bg-[#232323] transition light:bg-[#fff8f1] light:text-[var(--accent)] light:border-[var(--accent)]/30 light:hover:bg-[#f5e6d8]"
+              >
                 {tech}
               </span>
             ))}
@@ -54,7 +59,7 @@ export default function Home() {
         </div>
         {/* Right: Profile Image */}
         <div className="flex-1 flex items-center justify-center">
-          <Sun3D onClick={toggleTheme} />
+          <Sun3D onClick={toggleTheme} mode={theme} />
         </div>
       </section>
 

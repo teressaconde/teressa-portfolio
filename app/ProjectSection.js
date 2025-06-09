@@ -11,20 +11,20 @@ export default function ProjectSection() {
 
   return (
     <>
-      <section id="projects" className="relative w-full min-h-[80vh] px-8 md:px-32 py-20 overflow-hidden bg-[#18191A]">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-left mb-2 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">Projects</h2>
+      <section id="projects" className="relative w-full min-h-[80vh] px-8 md:px-32 py-20 overflow-hidden bg-[#18191A] light:bg-[#fff8f1] light:text-[#18191A]">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-left mb-2 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] light:text-[#18191A]">Projects</h2>
         <div className="w-20 h-1.5 bg-[var(--accent)] mb-10 rounded-full" />
         <div className="flex flex-col md:flex-row items-center justify-between">
           {/* Left: Project Info */}
-          <div className="relative z-10 flex-1 max-w-xl text-white">
+          <div className="relative z-10 flex-1 max-w-xl text-white card p-6 rounded-xl shadow light:text-[#18191A]">
             <div className="mb-2 text-xs text-[var(--accent)] font-semibold">Frontend</div>
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-4 leading-tight">PASS COLLEGE OFFICIAL WEBSITE</h2>
-            <p className="mb-6 text-lg text-white/90">
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-4 leading-tight light:text-[#18191A]">PASS COLLEGE OFFICIAL WEBSITE</h2>
+            <p className="mb-6 text-lg text-white/90 light:text-gray-900">
               As part of my thesis, I developed an official website for Pass College, directly addressing their absence of a dedicated online presence beyond a Facebook page. This project involved creating a marketing platform to attract prospective students and implementing an efficient online document request system for current students. Key features include dynamic program showcases, news and events sections, a user-friendly content management system, and a secure student portal for document requests, significantly enhancing the college&apos;s communication and service capabilities.
             </p>
             <div className="flex flex-wrap gap-2 mb-6">
               {techs.map((tech) => (
-                <span key={tech} className="bg-black/60 text-white px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wide border border-[var(--accent)]/30">{tech}</span>
+                <span key={tech} className="badge bg-black/60 text-white px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wide border border-[var(--accent)]/30 light:bg-[#fff8f1] light:text-[var(--accent)] light:border-[var(--accent)]/30 light:hover:bg-[#f5e6d8]">{tech}</span>
               ))}
             </div>
             <div className="flex gap-4 mt-4">
@@ -39,7 +39,7 @@ export default function ProjectSection() {
           </div>
           {/* Right: Project Image */}
           <div className="relative flex-1 flex items-center justify-center z-10 mt-12 md:mt-0">
-            <div className="w-[440px] h-[260px] rounded-2xl overflow-hidden shadow-2xl border-4 border-gray-800 bg-gray-900 flex items-center justify-center">
+            <div className="w-[440px] h-[260px] rounded-2xl overflow-hidden shadow-2xl border-4 border-gray-800 bg-gray-900 flex items-center justify-center light:border-[#e2cdb0] light:bg-[#f5e6d8]">
               <Image
                 src="/project-laptop.png"
                 alt="Project Screenshot"
@@ -52,18 +52,20 @@ export default function ProjectSection() {
         </div>
       </section>
       {/* Second Project (dummy info) */}
-      <section className="relative w-full min-h-[80vh] px-8 md:px-32 py-20 overflow-hidden bg-[#18191A] border-t border-gray-800">
+      <section className="relative w-full min-h-[80vh] px-8 md:px-32 py-20 overflow-hidden bg-[#18191A] border-t border-gray-800 light:bg-[#fff8f1] light:text-[#18191A] light:border-[#e2cdb0]">
         <div className="flex flex-col md:flex-row items-center justify-between">
           {/* Left: Project Info */}
-          <div className="relative z-10 flex-1 max-w-xl text-white">
+          <div className="relative z-10 flex-1 max-w-xl text-white card p-6 rounded-xl shadow light:text-[#18191A]">
             <div className="mb-2 text-xs text-[var(--accent)] font-semibold">Fullstack</div>
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-4 leading-tight">DUMMY PROJECT TITLE</h2>
-            <p className="mb-6 text-lg text-white/90">
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-4 leading-tight light:text-[#18191A]">DUMMY PROJECT TITLE</h2>
+            <p className="mb-6 text-lg text-white/90 light:text-gray-900">
               This is a dummy project description. It showcases a fullstack application with authentication, real-time chat, and a beautiful dashboard. Built for demonstration purposes only.
             </p>
             <div className="flex flex-wrap gap-2 mb-6">
-              {["node.js", "express", "mongodb", "react", "socket.io"].map((tech) => (
-                <span key={tech} className="bg-black/60 text-white px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wide border border-[var(--accent)]/30">{tech}</span>
+              {[
+                "node.js", "express", "mongodb", "react", "socket.io"
+              ].map((tech) => (
+                <span key={tech} className="badge bg-black/60 text-white px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wide border border-[var(--accent)]/30 light:bg-[#fff8f1] light:text-[var(--accent)] light:border-[var(--accent)]/30 light:hover:bg-[#f5e6d8]">{tech}</span>
               ))}
             </div>
             <div className="flex gap-4 mt-4">
@@ -78,7 +80,7 @@ export default function ProjectSection() {
           </div>
           {/* Right: Project Image */}
           <div className="relative flex-1 flex items-center justify-center z-10 mt-12 md:mt-0">
-            <div className="w-[440px] h-[260px] rounded-2xl overflow-hidden shadow-2xl border-4 border-gray-800 bg-gray-900 flex items-center justify-center">
+            <div className="w-[440px] h-[260px] rounded-2xl overflow-hidden shadow-2xl border-4 border-gray-800 bg-gray-900 flex items-center justify-center light:border-[#e2cdb0] light:bg-[#f5e6d8]">
               <Image
                 src="/dummy.png"
                 alt="Dummy Project Screenshot"

@@ -1,16 +1,60 @@
 "use client";
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
+import { useMemo } from 'react';
 
-export default function Sun3D({ onClick }) {
+function Sun({ onClick }) {
+  // Rays: 12 cylinders around the sun
+  const rays = useMemo(() => {
+    const arr = [];
+    for (let i = 0; i < 12; i++) {
+      const angle = (i / 12) * Math.PI * 2;
+      arr.push(
+        <mesh key={i} position={[Math.cos(angle) * 1.5, Math.sin(angle) * 1.5, 0]} rotation={[0, 0, angle]}>
+          <cylinderGeometry args={[0.07, 0.07, 1, 16]} />
+          <meshStandardMaterial color="#FFD700" emissive="#FFA500" metalness={0.5} roughness={0.3} />
+        </mesh>
+      );
+    }
+    return arr;
+  }, []);
+
   return (
-    <Canvas camera={{ position: [0, 0, 3], fov: 50 }} style={{ cursor: 'pointer' }}>
-      <ambientLight intensity={0.8} />
-      <pointLight position={[5, 5, 5]} intensity={1.2} />
-      <mesh onClick={onClick} castShadow receiveShadow>
-        <sphereGeometry args={[0.9, 32, 32]} />
+    <group onClick={onClick} style={{ cursor: 'pointer' }}>
+      {/* Sun core */}
+      <mesh castShadow receiveShadow>
+        <sphereGeometry args={[1.5, 48, 48]} />
         <meshStandardMaterial color="#FFD700" emissive="#FFA500" metalness={0.5} roughness={0.3} />
       </mesh>
+      {/* Rays */}
+      {rays}
+    </group>
+  );
+}
+
+function Moon({ onClick }) {
+  return (
+    <group onClick={onClick} style={{ cursor: 'pointer' }}>
+      {/* Main moon body */}
+      <mesh castShadow receiveShadow position={[0, 0, 0]}>
+        <sphereGeometry args={[1.5, 48, 48]} />
+        <meshStandardMaterial color="#e0e0e0" metalness={0.3} roughness={0.7} />
+      </mesh>
+      {/* Crescent cutout */}
+      <mesh position={[0.6, 0, 0.2]}>
+        <sphereGeometry args={[1.5, 48, 48]} />
+        <meshStandardMaterial color="#fdf6ee" />
+      </mesh>
+    </group>
+  );
+}
+
+export default function Sun3D({ onClick, mode }) {
+  return (
+    <Canvas camera={{ position: [0, 0, 5], fov: 50 }} style={{ cursor: 'pointer', width: 220, height: 220 }}>
+      <ambientLight intensity={0.9} />
+      <pointLight position={[5, 5, 5]} intensity={1.2} />
+      {mode === 'light' ? <Sun onClick={onClick} /> : <Moon onClick={onClick} />}
       <OrbitControls enableZoom={false} enablePan={false} enableRotate={false} />
     </Canvas>
   );
