@@ -1,59 +1,69 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 export default function LoadingScreen() {
   const [percent, setPercent] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+  const [isFadingOut, setIsFadingOut] = useState(false);
+  const frameRef = useRef(null);
+  const startTimeRef = useRef(null);
+
+  const duration = 4000; // Total loading time (ms)
 
   useEffect(() => {
-    if (percent < 100) {
-      const interval = setInterval(() => {
-        setPercent((prev) => (prev < 100 ? prev + 1 : 100));
-      }, 16); // ~60fps
-      return () => clearInterval(interval);
-    }
-  }, [percent]);
+    const animate = (timestamp) => {
+      if (!startTimeRef.current) startTimeRef.current = timestamp;
+      const elapsed = timestamp - startTimeRef.current;
+      const progress = Math.min((elapsed / duration) * 100, 100);
+      setPercent(progress);
+
+      if (progress < 100) {
+        frameRef.current = requestAnimationFrame(animate);
+      } else {
+        setIsFadingOut(true);
+        setTimeout(() => setIsVisible(false), 700); // Wait for fade-out
+      }
+    };
+
+    frameRef.current = requestAnimationFrame(animate);
+
+    return () => {
+      if (frameRef.current) cancelAnimationFrame(frameRef.current);
+    };
+  }, []);
+
+  if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-[#0a1026] to-[#181c2f] overflow-hidden">
+    <div
+      aria-label="Loading screen"
+      className={`fixed inset-0 z-50 flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-[#0a1026] to-[#181c2f] overflow-hidden transition-opacity duration-700 ${
+        isFadingOut ? "opacity-0" : "opacity-100"
+      }`}
+    >
       {/* Corner Accents */}
       <div className="absolute top-0 left-0 w-16 h-16 border-t-4 border-l-4 border-blue-400 rounded-tl-lg" />
       <div className="absolute top-0 right-0 w-16 h-16 border-t-4 border-r-4 border-pink-400 rounded-tr-lg" />
       <div className="absolute bottom-0 left-0 w-16 h-16 border-b-4 border-l-4 border-pink-400 rounded-bl-lg" />
       <div className="absolute bottom-0 right-0 w-16 h-16 border-b-4 border-r-4 border-blue-400 rounded-br-lg" />
 
-      {/* Particles */}
-      <div className="absolute inset-0 pointer-events-none">
-        {[...Array(40)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-white/20 rounded-full animate-pulse"
-            style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 2}s`,
-            }}
-          />
-        ))}
-      </div>
-
       {/* Glowing Icon */}
       <div className="relative mb-8">
         <div className="w-28 h-28 rounded-full bg-gradient-to-br from-blue-500 to-pink-500 flex items-center justify-center shadow-2xl animate-glow">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg
+            width="48"
+            height="48"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
             <polyline points="16 18 22 12 16 6" />
             <polyline points="8 6 2 12 8 18" />
           </svg>
         </div>
-        <style jsx>{`
-          .animate-glow {
-            box-shadow: 0 0 60px 10px #7f5af0, 0 0 120px 40px #ff6ac1;
-            animation: glow 2s alternate infinite;
-          }
-          @keyframes glow {
-            0% { box-shadow: 0 0 60px 10px #7f5af0, 0 0 120px 40px #ff6ac1; }
-            100% { box-shadow: 0 0 80px 20px #7f5af0, 0 0 160px 60px #ff6ac1; }
-          }
-        `}</style>
       </div>
 
       {/* Name and Subtitle */}
@@ -67,24 +77,48 @@ export default function LoadingScreen() {
       {/* Progress Bar */}
       <div className="w-72 max-w-full mb-4">
         <div className="h-2 rounded-full bg-gradient-to-r from-blue-400 to-pink-400 relative overflow-hidden">
-          <div className="absolute left-0 top-0 h-2 bg-white/30 animate-progress w-full" />
+          <div
+            className="absolute left-0 top-0 h-2 bg-white/40"
+            style={{
+              width: `${percent}%`,
+              transition: "width 0.1s linear",
+            }}
+          />
         </div>
-        <style jsx>{`
-          .animate-progress {
-            animation: progress 2s linear infinite;
-          }
-          @keyframes progress {
-            0% { width: 0; }
-            100% { width: 100%; }
-          }
-        `}</style>
       </div>
-      <div className="text-xl font-bold text-blue-300 mb-2">{percent}%</div>
+
+      {/* Percentage */}
+      <div className="text-xl font-bold text-blue-300 mb-2">
+        {Math.floor(percent)}%
+      </div>
+
+      {/* Bouncing Dots */}
       <div className="flex gap-2 justify-center">
-        <span className="w-3 h-3 bg-blue-400 rounded-full inline-block animate-bounce" style={{ animationDelay: '0s' }} />
-        <span className="w-3 h-3 bg-blue-400 rounded-full inline-block animate-bounce" style={{ animationDelay: '0.2s' }} />
-        <span className="w-3 h-3 bg-blue-400 rounded-full inline-block animate-bounce" style={{ animationDelay: '0.4s' }} />
+        {[0, 1, 2].map((i) => (
+          <span
+            key={i}
+            className="w-3 h-3 bg-blue-400 rounded-full inline-block animate-bounce"
+            style={{ animationDelay: `${i * 0.2}s` }}
+          />
+        ))}
       </div>
+
+      {/* Embedded Styles */}
+      <style jsx>{`
+        .animate-glow {
+          box-shadow: 0 0 60px 10px #7f5af0, 0 0 120px 40px #ff6ac1;
+          animation: glow 2s alternate infinite;
+        }
+
+        @keyframes glow {
+          0% {
+            box-shadow: 0 0 60px 10px #7f5af0, 0 0 120px 40px #ff6ac1;
+          }
+          100% {
+            box-shadow: 0 0 80px 20px #7f5af0, 0 0 160px 60px #ff6ac1;
+          }
+        }
+      `}</style>
     </div>
   );
-} 
+}

@@ -9,10 +9,10 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate data fetching (replace with your real data fetching logic)
-    const timer = setTimeout(() => {
+    // Show loading screen for the full animation duration (4s + 0.5s fade)
+    let timer = setTimeout(() => {
       setLoading(false);
-    }, 2000); // 2 seconds for demo
+    }, 4500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -24,7 +24,7 @@ export default function Home() {
       <section className="px-6 py-20 md:px-20 lg:px-40">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
-            Hi, I'm 
+            Hi, I&apos;m 
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8">
             A passionate developer crafting beautiful digital experiences
@@ -123,9 +123,9 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="px-6 py-20 md:px-20 lg:px-40">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">Let's Connect</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8">Let&apos;s Connect</h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-12">
-            I'm always open to discussing new projects and opportunities.
+            I&apos;m always open to discussing new projects and opportunities.
           </p>
           <div className="flex justify-center gap-6">
             <a
