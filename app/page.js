@@ -19,158 +19,88 @@ export default function Home() {
   if (loading) return <LoadingScreen />;
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#1a1a1a]">
-      {/* Hero Section */}
-      <section className="px-6 py-20 md:px-20 lg:px-40">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
-            Hi, I&apos;m 
+    <div className="min-h-screen bg-[#18191A] text-white font-sans relative overflow-x-hidden">
+      {/* Navigation */}
+      <nav className="flex justify-between items-center px-12 py-8">
+        <div className="text-3xl font-extrabold tracking-tight">PORTFOLIO</div>
+        <div className="flex gap-8 text-lg font-bold">
+          <a href="#home" className="hover:text-yellow-400 transition">HOME</a>
+          <a href="#about" className="hover:text-yellow-400 transition">ABOUT</a>
+        </div>
+      </nav>
+
+      {/* Main Section */}
+      <section className="flex flex-col md:flex-row items-center justify-between px-12 md:px-24 py-12 md:py-24 gap-12 md:gap-0">
+        {/* Left: Text Content */}
+        <div className="flex-1 flex flex-col items-start justify-center max-w-2xl">
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
+            Hi I&apos;m <span className="text-gray-200">Kurt!!</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8">
-            A passionate developer crafting beautiful digital experiences
-          </p>
-          <div className="flex gap-4">
-            <a
-              href="#projects"
-              className="px-6 py-3 bg-black dark:bg-white text-white dark:text-black rounded-lg font-medium hover:opacity-90 transition-opacity"
-            >
-              View Projects
-            </a>
-            <a
-              href="#contact"
-              className="px-6 py-3 border border-black dark:border-white rounded-lg font-medium hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
-            >
-              Contact Me
-            </a>
+          <div className="text-2xl md:text-3xl font-bold mb-2">
+            <span className="text-yellow-400">Web Developer</span>
+            <span className="text-base font-normal text-gray-300 ml-2">specializing in <span className="font-bold text-white">UI/UX design</span>,</span>
+          </div>
+          <div className="text-lg text-gray-400 mb-6">
+            creating responsive, user-friendly websites with cutting-edge technologies.
+          </div>
+          {/* Tech Stack Badges */}
+          <div className="flex flex-wrap gap-4 mt-4">
+            {["Next.js", "ReactJS", "Laravel", "JavaScript", "TypeScript", "Git", "TailwindCSS", "Figma", "Photoshop", "Postman"].map((tech) => (
+              <span key={tech} className="bg-[#232323] text-gray-200 px-5 py-2 rounded-full text-base font-medium shadow-sm border border-[#232323] hover:bg-[#333] transition">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+        {/* Right: Profile Image */}
+        <div className="flex-1 flex items-center justify-center">
+          <div className="relative w-[350px] h-[400px] rounded-[48px] overflow-hidden shadow-2xl border border-gray-700 bg-gradient-to-br from-[#1a1a1a] to-[#2a1a2a]">
+            <Image
+              src="/profile.png" // Replace with your image
+              alt="Profile"
+              fill
+              className="object-cover"
+              priority
+            />
+            {/* Optional: Add a background effect behind the image */}
+            <div className="absolute inset-0 z-0" style={{background: "radial-gradient(ellipse at 60% 40%, #a83279 0%, #1a1a1a 80%)", opacity: 0.5}} />
           </div>
         </div>
       </section>
-
-      {/* Projects Section */}
-      <section id="projects" className="px-6 py-20 md:px-20 lg:px-40 bg-gray-50 dark:bg-[#242424]">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12">Featured Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Project Card 1 */}
-            <div className="bg-white dark:bg-[#1a1a1a] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <div className="aspect-video bg-gray-200 dark:bg-gray-800 relative">
-                <Image
-                  src="/project1.jpg"
-                  alt="Project 1"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Project Name</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  A brief description of the project and its key features.
-                </p>
-                <div className="flex gap-2">
-                  <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">React</span>
-                  <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">Next.js</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Project Card 2 */}
-            <div className="bg-white dark:bg-[#1a1a1a] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <div className="aspect-video bg-gray-200 dark:bg-gray-800 relative">
-                <Image
-                  src="/project2.jpg"
-                  alt="Project 2"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Project Name</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  A brief description of the project and its key features.
-                </p>
-                <div className="flex gap-2">
-                  <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">TypeScript</span>
-                  <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">Tailwind</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Project Card 3 */}
-            <div className="bg-white dark:bg-[#1a1a1a] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <div className="aspect-video bg-gray-200 dark:bg-gray-800 relative">
-                <Image
-                  src="/project3.jpg"
-                  alt="Project 3"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Project Name</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  A brief description of the project and its key features.
-                </p>
-                <div className="flex gap-2">
-                  <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">Node.js</span>
-                  <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">MongoDB</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="px-6 py-20 md:px-20 lg:px-40">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">Let&apos;s Connect</h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-12">
-            I&apos;m always open to discussing new projects and opportunities.
-          </p>
-          <div className="flex justify-center gap-6">
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-4 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-            >
-              <Image
-                src="/github.svg"
-                alt="GitHub"
-                width={24}
-                height={24}
-                className="dark:invert"
-              />
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-4 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-            >
-              <Image
-                src="/linkedin.svg"
-                alt="LinkedIn"
-                width={24}
-                height={24}
-                className="dark:invert"
-              />
-            </a>
-            <a
-              href="mailto:your.email@example.com"
-              className="p-4 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-            >
-              <Image
-                src="/email.svg"
-                alt="Email"
-                width={24}
-                height={24}
-                className="dark:invert"
-              />
-            </a>
-          </div>
-        </div>
-      </section>
+      {/* Optional: Subtle dots background */}
+      <div className="pointer-events-none absolute inset-0 z-0">
+        {[...Array(40)].map((_, i) => {
+          // Randomize initial position, direction, and duration
+          const top = Math.random() * 100;
+          const left = Math.random() * 100;
+          const dx = (Math.random() - 0.5) * 20; // move up to ±10% vertically
+          const dy = (Math.random() - 0.5) * 20; // move up to ±10% horizontally
+          const duration = 6 + Math.random() * 6; // 6s to 12s
+          return (
+            <span
+              key={i}
+              className="absolute w-1 h-1 bg-white/10 rounded-full particle"
+              style={{
+                top: `${top}%`,
+                left: `${left}%`,
+                animation: `moveParticle${i} ${duration}s ease-in-out infinite alternate`,
+              }}
+            />
+          );
+        })}
+        <style jsx>{`
+          ${[...Array(40)].map((_, i) => {
+            const dx = (Math.random() - 0.5) * 20;
+            const dy = (Math.random() - 0.5) * 20;
+            return `
+              @keyframes moveParticle${i} {
+                0% { transform: translate(0, 0); }
+                100% { transform: translate(${dx}vw, ${dy}vh); }
+              }
+            `;
+          }).join('')}
+        `}</style>
+      </div>
     </div>
   );
 }
