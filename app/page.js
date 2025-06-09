@@ -7,6 +7,7 @@ import ExperienceSection from "./ExperienceSection";
 import ProjectSection from "./ProjectSection";
 import Sun3D from './components/Sun3D';
 import { useTheme } from "./ThemeProvider";
+import SurpriseButton from './components/SurpriseButton';
 
 const LoadingScreen = dynamic(() => import("./LoadingScreen"), { ssr: false });
 
@@ -69,6 +70,9 @@ export default function Home() {
       <ExperienceSection />
       {/* Project Section */}
       <ProjectSection />
+
+      {/* Surprise Button */}
+      <SurpriseButton />
 
       {/* Optional: Subtle dots background */}
       <div className="pointer-events-none fixed inset-0 z-0">
