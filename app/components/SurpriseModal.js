@@ -272,7 +272,7 @@ export default function SurpriseModal({ isOpen, onClose }) {
                     className="mt-4 p-4 bg-[var(--accent)]/10 rounded-lg"
                   >
                     <p className="text-[var(--accent)] font-medium">
-                      You found the secret message! 🌟 You're the best girlfriend ever! 💝
+                      You found the secret message! 🌟 You&apos;re the best girlfriend ever! 💝
                     </p>
                   </motion.div>
                 )}
