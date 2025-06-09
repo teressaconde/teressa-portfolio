@@ -23,14 +23,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#18191A] text-white font-sans relative overflow-x-hidden">
       {/* Navigation */}
-      <nav className="flex justify-between items-center px-12 py-8">
-        <div className="text-3xl font-extrabold tracking-tight">PORTFOLIO</div>
-        <div className="flex gap-8 text-lg font-bold">
-          <a href="#home" className="hover:text-yellow-400 transition">HOME</a>
-          <a href="#about" className="hover:text-yellow-400 transition">ABOUT</a>
-          <a href="#experience" className="hover:text-yellow-400 transition">EXPERIENCE</a>
-        </div>
-      </nav>
+      {/* Removed old header navigation */}
 
       {/* Main Section */}
       <section className="flex flex-col md:flex-row items-center justify-between px-8 md:px-32 py-12 md:py-24 gap-12 md:gap-0">
