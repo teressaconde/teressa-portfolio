@@ -2,7 +2,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useTheme } from "./ThemeProvider";
-import Scene3D from './components/Scene3D';
 
 const navLinks = [
   { href: "#home", label: "Home" },
@@ -48,10 +47,6 @@ export default function Sidebar() {
       {/* Sidebar */}
       <aside className={`fixed top-0 left-0 h-screen w-16 flex flex-col items-center bg-black/90 border-r border-gray-800 z-50 shadow-lg transition-transform duration-300
         ${open ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:flex`}>
-        {/* 3D Logo */}
-        <div className="w-16 h-16 mt-4 mb-2 pointer-events-none">
-          <Scene3D />
-        </div>
         {/* Light/Dark Toggle */}
         <button onClick={toggleTheme} className="mt-6 mb-4 text-[var(--accent)] hover:text-white transition">
           {theme === 'dark' ? (

@@ -5,12 +5,14 @@ import dynamic from "next/dynamic";
 import AboutSection from "./AboutSection";
 import ExperienceSection from "./ExperienceSection";
 import ProjectSection from "./ProjectSection";
-import Scene3D from './components/Scene3D';
+import Sun3D from './components/Sun3D';
+import { useTheme } from "./ThemeProvider";
 
 const LoadingScreen = dynamic(() => import("./LoadingScreen"), { ssr: false });
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
+  const { toggleTheme } = useTheme();
 
   useEffect(() => {
     // Show loading screen for the full animation duration (4s + 0.5s fade)
@@ -52,7 +54,7 @@ export default function Home() {
         </div>
         {/* Right: Profile Image */}
         <div className="flex-1 flex items-center justify-center">
-          <Scene3D />
+          <Sun3D onClick={toggleTheme} />
         </div>
       </section>
 
