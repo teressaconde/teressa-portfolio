@@ -30,8 +30,8 @@ const experiences = [
 export default function ExperienceSection() {
   return (
     <section id="experience" className="w-full min-h-[60vh] bg-[#18191A] px-8 md:px-32 py-20">
-      <h2 className="text-3xl md:text-4xl font-bold text-left mb-2">Experience</h2>
-      <div className="w-16 h-1 bg-white/60 mb-10 rounded" />
+      <h2 className="text-3xl md:text-4xl font-extrabold text-left mb-2 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">Experience</h2>
+      <div className="w-20 h-1.5 bg-gray-400 mb-10 rounded-full" />
       <div className="relative flex flex-col items-start">
         {/* Vertical timeline line */}
         <div className="absolute -left-6 top-0 h-full w-1 bg-gradient-to-b from-transparent via-emerald-500/60 to-transparent rounded-full z-0" />
@@ -55,9 +55,6 @@ export default function ExperienceSection() {
                 <div className="text-xl md:text-2xl font-extrabold mb-1">{exp.title}</div>
                 <div className="text-emerald-200 mb-1">{exp.company}</div>
                 <div className="text-gray-300 mb-2">{exp.description}</div>
-                {exp.readMore && (
-                  <a href="#" className="text-emerald-400 font-semibold hover:underline">Read More</a>
-                )}
               </div>
             </motion.div>
           ))}
