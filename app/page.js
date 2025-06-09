@@ -73,7 +73,7 @@ export default function Home() {
       <AboutSection />
 
       {/* Optional: Subtle dots background */}
-      <div className="pointer-events-none absolute inset-0 z-0">
+      <div className="pointer-events-none fixed inset-0 z-0">
         {[...Array(40)].map((_, i) => {
           // Randomize initial position, direction, and duration
           const top = Math.random() * 100;
