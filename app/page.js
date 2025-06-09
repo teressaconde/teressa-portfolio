@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
+import AboutSection from "./AboutSection";
 
 const LoadingScreen = dynamic(() => import("./LoadingScreen"), { ssr: false });
 
@@ -67,6 +68,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* About Section */}
+      <AboutSection />
+
       {/* Optional: Subtle dots background */}
       <div className="pointer-events-none absolute inset-0 z-0">
         {[...Array(40)].map((_, i) => {
