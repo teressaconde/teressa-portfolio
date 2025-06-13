@@ -35,7 +35,7 @@ export default function Home() {
         {/* Left: Text Content */}
         <div className="flex-1 flex flex-col items-start justify-center max-w-2xl">
           <h1 className="text-5xl md:text-6xl font-extrabold mb-4 leading-tight text-left">
-            Hi I&apos;m <span className="text-[var(--accent)]">Teressa!!</span>
+            Hi I&apos;m <span className="text-[var(--accent)]">Maria Teressa!!</span>
           </h1>
           <div className="text-2xl md:text-3xl font-bold mb-2 text-left">
             <span className="text-[var(--accent)]">UI/UX Designer</span>
