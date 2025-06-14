@@ -43,7 +43,7 @@ function Moon({ onClick }) {
       {/* Crescent cutout */}
       <mesh position={[0.6, 0, 0.2]}>
         <sphereGeometry args={[1.5, 48, 48]} />
-        <meshStandardMaterial color="#fdf6ee" />
+        <meshStandardMaterial color="#000000" />
       </mesh>
     </group>
   );

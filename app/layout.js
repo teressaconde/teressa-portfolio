@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Teressa Conde | UI/UX Designer",
+  title: "Maria Teressa Conde | UI/UX Designer",
   description: "UI/UX Designer specializing in creating user-centered experiences and intuitive interfaces",
 };
 

@@ -43,10 +43,13 @@ export default function AboutSection() {
           transition={{ duration: 0.7, delay: 0.2 }}
         >
        <p className="light:text-gray-800">
-  Bachelor of Science in Computer Science graduating student at the University of Mindanao, with a strong interest in UI/UX design and front-end development. Passionate about crafting user-centered interfaces and intuitive digital experiences that blend aesthetics with functionality.
+  Hello! I&apos;m a UI/UX designer and Computer Science student at the University of Mindanao with a strong passion for creating user-centered digital experiences. 
+  Through academic projects, freelance work, and internships, I&apos;ve developed practical skills in tools like Figma, Canva, Adobe Photoshop, and explored 
+  development using Flutter and Firebase.
 </p>
 <p className="light:text-gray-800">
-  I combine technical knowledge with a keen eye for design, using modern tools and principles to solve problems creatively and deliver seamless, responsive user experiences.
+  My experience as a Design Editor and Freelance Designer has taught me how to translate ideas into clear, user-friendly visual designs while collaborating with 
+  clients and teams.
 </p>
 
         </motion.div>

@@ -47,7 +47,7 @@ export default function Home() {
           {/* Tech Stack Badges */}
           <div className="flex flex-wrap gap-4 mt-4">
             {[
-              "Next.js", "ReactJS", "Laravel", "JavaScript", "TypeScript", "Git", "TailwindCSS", "Figma", "Photoshop", "Postman" , "Canva", "Firebase"
+              "Next.js", "ReactJS", "JavaScript",  "Git", "Figma", "Photoshop", "Flutter" , "Canva", "Firebase"
             ].map((tech) => (
               <span
                 key={tech}
