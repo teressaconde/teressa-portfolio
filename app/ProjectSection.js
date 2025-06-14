@@ -59,7 +59,7 @@ export default function ProjectSection() {
             <div className="mb-2 text-xs text-[var(--accent)] font-semibold">UI/UX Design</div>
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4 leading-tight light:text-[#18191A]">TaskOnTrack</h2>
             <p className="mb-6 text-lg text-white/90 light:text-gray-900">
-             This app is designed to simplify task management. It helps users organize their daily tasks by providing an easy way to create, track, and prioritize their work. The goal is to address the common problem of disorganization, and task overload ensuring users can stay productive and focused.
+             This app is designed to simplify task management. It helps users organize their daily tasks by providing an easy way to create, track, and prioritize their work. 
               </p>
             <div className="flex flex-wrap gap-2 mb-6">
               {[
@@ -96,15 +96,15 @@ export default function ProjectSection() {
       <div className="mb-2 text-xs text-[var(--accent)] font-semibold">UI Design</div>
       <h2 className="text-3xl md:text-4xl font-extrabold mb-4 leading-tight light:text-[#18191A]">Cinematheque Kiosk Ticketing System</h2>
       <p className="mb-6 text-lg text-white/90 light:text-gray-900">
-        [Short description of your third project. Mention the purpose, audience, or a key feature.]
+        The Cinematheque is a multifunctional kiosk solution for walk-in customers, streamlining the ticket-purchasing process. 
       </p>
       <div className="flex flex-wrap gap-2 mb-6">
-        {["[Tech 1]", "[Tech 2]"].map((tech) => (
+        {["Figma"].map((tech) => (
           <span key={tech} className="badge bg-black/60 text-white px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wide border border-[var(--accent)]/30 light:bg-[#fff8f1] light:text-[var(--accent)] light:border-[var(--accent)]/30 light:hover:bg-[#f5e6d8]">{tech}</span>
         ))}
       </div>
       <div className="flex gap-4 mt-4">
-        <a href="[Behance or portfolio link]" className="bg-[var(--accent)] hover:bg-[#6d3bbd] text-white px-6 py-2 rounded-lg font-semibold flex items-center gap-2 shadow transition">
+        <a href="https://www.behance.net/gallery/228132847/Cinematheque-Kiosk-Ticketing-System" className="bg-[var(--accent)] hover:bg-[#6d3bbd] text-white px-6 py-2 rounded-lg font-semibold flex items-center gap-2 shadow transition">
           View Project <span aria-hidden>→</span>
         </a>
         {/** Optional live demo */}
@@ -117,8 +117,8 @@ export default function ProjectSection() {
     {/* Right: Project Image */}
     <div className="relative flex-1 flex items-center justify-center z-10 mt-12 md:mt-0">
       <Image
-        src="/[image-file].png"
-        alt="[Alt text for image]"
+        src="/cinematheque.png"
+        alt="cinematheque"
         width={800}
         height={470}
         className="object-cover rounded-2xl w-full h-auto"
