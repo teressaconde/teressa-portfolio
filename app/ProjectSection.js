@@ -108,7 +108,7 @@ export default function ProjectSection() {
           View Project <span aria-hidden>→</span>
         </a>
         {/** Optional live demo */}
-        <a href="[Live link]" className="text-[var(--accent)] hover:underline flex items-center gap-2">
+        <a href="https://www.figma.com/proto/Us7mPFvg3imyS33FlB4sfK?node-id=0-1&t=kSUDzEJnZWqtNRDq-6" className="text-[var(--accent)] hover:underline flex items-center gap-2">
           <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 5v8m0 0l-3-3m3 3l3-3"/><rect x="3" y="3" width="12" height="12" rx="2"/></svg>
           Live Demo
         </a>
