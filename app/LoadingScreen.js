@@ -68,7 +68,7 @@ export default function LoadingScreen() {
 
       {/* Name and Subtitle */}
       <h1 className="text-3xl md:text-5xl font-bold mb-2 text-center bg-gradient-to-r from-[var(--accent)] via-[#b47aff] to-[#6d3bbd] bg-clip-text text-transparent">
-        Teressa <span className="text-[var(--accent)]">Conde</span>
+        Maria Teressa <span className="text-[var(--accent)]">Conde</span>
       </h1> 
       <p className="text-lg md:text-xl text-gray-200 mb-8 text-center font-mono tracking-wide">
         <span className="text-base font-normal text-gray-300 ml-2 light:text-gray-600">specializing in <span className="font-bold text-white light:text-[#18191A]">UI/UX Design</span>,</span>

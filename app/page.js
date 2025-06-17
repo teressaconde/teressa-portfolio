@@ -48,7 +48,7 @@ export default function Home() {
           {/* Tech Stack Badges */}
           <div className="flex flex-wrap gap-4 mt-4">
             {[
-              "Next.js", "ReactJS", "JavaScript",  "Git", "Figma", "Photoshop", "Flutter" , "Canva", "Firebase"
+              "Next.js", "JavaScript",  "Git", "Figma", "Photoshop", "Flutter" , "Canva", "Firebase", "Java", "PHP", "SQL"
             ].map((tech) => (
               <span
                 key={tech}
@@ -117,6 +117,10 @@ export default function Home() {
           }
         `}</style>
       </div>
+      {/* Footer */}
+      <footer className="w-full py-6 text-center text-xs text-gray-500 bg-transparent z-10 relative">
+        © {new Date().getFullYear()} Maria Teressa Conde. All rights reserved.
+      </footer>
     </div>
   );
 }

@@ -1,8 +1,13 @@
 "use client";
 
+import { useState } from "react";
+import ContactModal from "./components/ContactModal";
+
 export default function ContactSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section id="contact" className="py-20 px-8 md:px-32">
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-5xl md:text-6xl font-extrabold mb-6">
         Let&apos;s <span className="text-[var(--accent)]">Connect</span>
@@ -11,8 +16,8 @@ export default function ContactSection() {
           Ready to bring your next project to life? Let&apos;s discuss how we can work together.
         </p>
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-16">
-          <a
-            href="mailto:mariateressaconde@gmail.com"
+          <button
+            onClick={() => setIsModalOpen(true)}
             className="flex items-center justify-center gap-2 bg-[var(--accent)] hover:bg-[var(--accent)]/80 text-black font-semibold text-lg px-10 py-4 rounded-xl shadow transition-colors duration-200 mb-4 md:mb-0"
           >
             <span className="text-xl">
@@ -20,9 +25,9 @@ export default function ContactSection() {
             </span>
             Send Message
             <span className="ml-2">→</span>
-          </a>
+          </button>
           <a
-            href="https://meet.google.com/"
+            href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Meeting+with+Maria+Teressa&add=mariateressaconde@gmail.com&details=Let%27s+discuss+your+project!&location=Google+Meet"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 border-2 border-[var(--accent)] text-[var(--accent)] hover:bg-[var(--accent)] hover:text-black font-semibold text-lg px-10 py-4 rounded-xl shadow transition-colors duration-200"
@@ -34,19 +39,20 @@ export default function ContactSection() {
           </a>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-          {/* Email Card */}
+          {/* Download Resume Card */}
           <a
-            href="mailto:mariateressaconde@gmail.com"
+            href="/Conde_Resume.pdf"
+            download
             className="bg-black/40 light:bg-white/60 rounded-xl p-8 flex flex-col items-center shadow hover:bg-[var(--accent)]/10 transition-colors group"
           >
             <span className="mb-4 text-3xl text-[var(--accent)] group-hover:scale-110 transition-transform">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-10 h-10"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-.659 1.591l-7.091 7.091a2.25 2.25 0 01-3.182 0L3.409 8.584A2.25 2.25 0 012.75 6.993V6.75" /></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-10 h-10"><path strokeLinecap="round" strokeLinejoin="round" d="M12 16v-8m0 8l-4-4m4 4l4-4M4 20h16a2 2 0 002-2V6a2 2 0 00-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
             </span>
-            <p className="text-lg font-semibold mb-2 text-white light:text-black">mariateressaconde@gmail.com</p>
+            <p className="text-lg font-semibold mb-2 text-white light:text-black">Download Resume</p>
           </a>
           {/* Phone Card */}
           <a
-            href="tel:+639387006898"
+            href="tel:+639063323183"
             className="bg-black/40 light:bg-white/60 rounded-xl p-8 flex flex-col items-center shadow hover:bg-[var(--accent)]/10 transition-colors group"
           >
             <span className="mb-4 text-3xl text-[var(--accent)] group-hover:scale-110 transition-transform">
