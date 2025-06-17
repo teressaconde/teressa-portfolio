@@ -5,10 +5,10 @@ export default function ContactSection() {
     <section id="contact" className="py-20 px-8 md:px-32">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-5xl md:text-6xl font-extrabold mb-6">
-          Let's <span className="text-[var(--accent)]">Connect</span>
+        Let&apos;s <span className="text-[var(--accent)]">Connect</span>
         </h2>
         <p className="text-xl md:text-2xl text-gray-300 mb-12 light:text-gray-700">
-          Ready to bring your next project to life? Let's discuss how we can work together.
+          Ready to bring your next project to life? Let&apos;s discuss how we can work together.
         </p>
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-16">
           <a
