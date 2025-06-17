@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import AboutSection from "./AboutSection";
 import ExperienceSection from "./ExperienceSection";
 import ProjectSection from "./ProjectSection";
+import ContactSection from "./ContactSection";
 import Sun3D from './components/Sun3D';
 import { useTheme } from "./ThemeProvider";
 
@@ -70,8 +71,8 @@ export default function Home() {
       <ExperienceSection />
       {/* Project Section */}
       <ProjectSection />
-
-   
+      {/* Contact Section */}
+      <ContactSection />
 
       {/* Optional: Subtle dots background */}
       <div className="pointer-events-none fixed inset-0 z-0">

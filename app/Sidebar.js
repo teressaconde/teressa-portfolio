@@ -8,6 +8,7 @@ const navLinks = [
   { href: "#about", label: "About" },
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
+  { href: "#contact", label: "Contact" }
 ];
 
 const socials = [
@@ -59,16 +60,16 @@ export default function Sidebar() {
       <aside className={`fixed top-0 left-0 h-screen w-16 flex flex-col items-center bg-black/90 border-r border-gray-800 z-50 shadow-lg transition-transform duration-300
         ${open ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:flex`}>
         {/* Light/Dark Toggle */}
-        <button onClick={toggleTheme} className="mt-6 mb-4 text-[var(--accent)] hover:text-white transition">
+        <button onClick={toggleTheme} className="mt-4 mb-2 text-[var(--accent)] hover:text-white transition">
           {theme === 'dark' ? (
             <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 16v2m11-11h-2M3 12H1m16.95 6.95-1.41-1.41M6.46 6.46 5.05 5.05m12.02 0-1.41 1.41M6.46 17.54l-1.41 1.41"/></svg>
           ) : (
             <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
           )}
         </button>
-        <div className="flex flex-col flex-1 justify-center gap-20 w-full items-center">
+        <div className="flex flex-col flex-1 justify-center w-full items-center">
           {/* Nav Links */}
-          <nav className="flex flex-col gap-[52px] w-full items-center">
+          <nav className="flex flex-col gap-10 w-full items-center">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
