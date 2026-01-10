@@ -3,36 +3,12 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    date: "2020",
-    title: "Animation & Programming Intern",
-    company: "F-Squared Technologies Inc.",
+    date: "2025",
+    title: "Front End Developer - Intern",
+    company: "Mini Clean Business Solution (Infosoft)",
     description: [
-      "Completed On-the-Job Training (OJT) as part of academic course requirements",
-      "Engaged in a two-week immersion in the animation field and industry",
-      "Gained valuable insights into animation workflows, tools, and industry standards",
-      "Acquired hands-on experience through exploration and practice of animation techniques",
-    ],
-  },
-  {
-    date: "2019 - Present",
-    title: "Design Editor",
-    company: "Dr. Santiago Dakudao Sr. National High School",
-    description: [
-      "Worked as a student assistant for a public school teacher ",
-      "Designed educational and administrative materials using Canva and Photoshop",
-      "Created layouts for ID cards, classroom visuals, and official documents",
-      "Enhanced skills in layout design, visual communication, and attention to detail in an educational setting",
-    ],
-  },
-  {
-    date: "2024 - Present",
-    title: "Publication Material Editor",
-    company: "Freelance | Solumi, Tibungco, Davao City",
-   description: [
-      "Currently working as a Publication Material Editor for a coffee shop in Tibungco, Davao City",
-      "Design and edit print and digital materials including menus, promotional posters, and announcements",
-      "Develop content that effectively communicates promotions, events, and updates to customers",
-      "Apply creative design principles to enhance customer engagement and brand presence.",
+      "Designed and developed a high-fidelity mobile app prototype using Figma, focusing on user-friendly interfaces tailored for Farmer App workflows",
+      "Implemented front-end development of the Farm App using Flutter, ensuring responsive design and a seamless user experience across Android and iOS platforms",
     ],
   },
   {
@@ -42,8 +18,40 @@ const experiences = [
     description: [
       "Manage a small design business specializing in customized souvenirs and visual materials using Canva",
       "Design a variety of materials including invitations, ID cards, social media graphics, and branded items",
-      "Strengthened skills in layout design, branding, and client communication",
-      "Ensure high-quality, visually appealing outputs aligned with client expectations and brand identity.",
+      "Collaborate with clients to understand their needs and deliver tailored design solutions",
+      "Ensure high-quality, visually appealing outputs aligned with client expectations and brand identity",
+    ],
+  },
+  {
+    date: "2024 - Present",
+    title: "Publication Material Editor",
+    company: "Freelance | Solumi, Tibungco, Davao City",
+    description: [
+      "Currently working as a Publication Material Editor for a coffee shop in Tibungco, Davao City",
+      "Design and edit print and digital materials including menus, promotional posters, and announcements",  
+      "Apply creative design principles to enhance customer engagement and brand presence",
+    ],
+  },
+  {
+    date: "2019 - Present",
+    title: "Design Editor",
+    company: "Dr. Santiago Dakudao Sr. National High School",
+    description: [
+      "Worked as a student assistant for a public school teacher",
+      "Designed educational and administrative materials using Canva and Photoshop",
+      "Created layouts for ID cards, classroom visuals, and official documents",
+      "Enhanced skills in layout design, visual communication, and attention to detail in an educational setting",
+    ],
+  },
+  {
+    date: "2020",
+    title: "Animation & Programming Intern",
+    company: "F-Squared Technologies Inc.",
+    description: [
+      "Completed On-the-Job Training (OJT) as part of academic course requirements",
+      "Engaged in a two-week immersion in the animation field and industry",
+      "Gained valuable insights into animation workflows, tools, and industry standards",
+      "Acquired hands-on experience through exploration and practice of animation techniques",
     ],
   },
 ];
@@ -82,7 +90,7 @@ export default function ExperienceSection() {
                   {exp.title}
                 </div>
                 <div className="text-[var(--accent)] mb-1">{exp.company}</div>
-                <div className="text-gray-300 mb-2 light:text-gray-900">
+                <div className="text-gray-300 mb-2 light:text-gray-900 text-justify">
                   {Array.isArray(exp.description) ? (
                     <ul className="list-disc list-inside space-y-1">
                       {exp.description.map((item, i) => (

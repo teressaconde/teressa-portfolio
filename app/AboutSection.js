@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const textFadeIn = {
@@ -38,7 +39,7 @@ export default function AboutSection() {
       <div className="flex flex-col md:flex-row gap-12">
         {/* Left: Text */}
         <motion.div
-          className="flex-1 text-lg text-gray-300 space-y-8 light:text-gray-700"
+          className="flex-1 text-lg text-gray-300 space-y-8 light:text-gray-700 text-justify"
           {...textFadeIn}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
@@ -72,14 +73,14 @@ export default function AboutSection() {
 
           {/* Focus */}
           <div className="flex items-start gap-4 bg-[#242526] hover:bg-[#2a2b2c] transition-colors duration-300 p-6 rounded-xl shadow-lg border border-gray-700/50 light:bg-white light:border-gray-200 light:hover:bg-gray-50">
-            <div className="mt-1">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2H8C6.34315 2 5 3.34315 5 5V8C5 9.65685 6.34315 11 8 11H12V2Z" fill="#0ACF83"/>
-                <path d="M12 11H8C6.34315 11 5 12.3431 5 14V17C5 18.6569 6.34315 20 8 20H12V11Z" fill="#A259FF"/>
-                <path d="M19 5C19 3.34315 17.6569 2 16 2H12V11H16C17.6569 11 19 9.65685 19 8V5Z" fill="#F24E1E"/>
-                <path d="M19 14C19 12.3431 17.6569 11 16 11H12V20H16C17.6569 20 19 18.6569 19 17V14Z" fill="#FF7262"/>
-                <path d="M12 11H16C17.6569 11 19 12.3431 19 14V17C19 18.6569 17.6569 20 16 20H12V11Z" fill="#1ABCFE"/>
-              </svg>
+            <div className="mt-1" aria-hidden>
+              <Image
+                src="/figma.svg"
+                alt=""
+                width={24}
+                height={24}
+                className="h-6 w-6"
+              />
             </div>
             <div>
               <div className="font-bold text-lg light:text-[#18191A]">Focus</div>

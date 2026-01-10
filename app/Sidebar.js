@@ -8,8 +8,113 @@ const navLinks = [
   { href: "#about", label: "About" },
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
+  { href: "#certificates", label: "Certificates" },
   { href: "#contact", label: "Contact" }
 ];
+
+function NavIcon({ href }) {
+  switch (href) {
+    case "#home":
+      return (
+        <svg
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M3 10.5 12 3l9 7.5" />
+          <path d="M5 10v10h14V10" />
+        </svg>
+      );
+    case "#about":
+      return (
+        <svg
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M20 21a8 8 0 0 0-16 0" />
+          <circle cx="12" cy="8" r="4" />
+        </svg>
+      );
+    case "#experience":
+      return (
+        <svg
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <rect x="3" y="7" width="18" height="14" rx="2" />
+          <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+        </svg>
+      );
+    case "#projects":
+      return (
+        <svg
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M3 7h6l2 2h10v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" />
+        </svg>
+      );
+    case "#certificates":
+      return (
+        <svg
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M8 3h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" />
+          <path d="M9 7h6" />
+          <path d="M9 11h6" />
+          <path d="M10 21l2-2 2 2 0-4h-4v4z" />
+        </svg>
+      );
+    case "#contact":
+      return (
+        <svg
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <rect x="3" y="5" width="18" height="14" rx="2" />
+          <path d="M3 7l9 6 9-6" />
+        </svg>
+      );
+    default:
+      return null;
+  }
+}
 
 const socials = [
   { href: "https://www.facebook.com/teressa.conde.5", label: "Facebook", icon: (
@@ -24,7 +129,7 @@ const socials = [
   icon: (
     <svg
       width="22"
-      height="22"
+      height="23"
       viewBox="0 0 24 24"
       fill="currentColor"
     >
@@ -69,15 +174,18 @@ export default function Sidebar() {
         </button>
         <div className="flex flex-col flex-1 justify-center w-full items-center">
           {/* Nav Links */}
-          <nav className="flex flex-col gap-10 w-full items-center">
+          <nav className="flex flex-col gap-6 w-full items-center">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="group relative text-gray-300 font-semibold text-sm px-2 py-2 w-full flex justify-center items-center rounded transition-colors duration-200"
+                aria-label={link.label}
+                title={link.label}
+                className="group relative text-gray-300 px-2 py-2 w-full flex justify-center items-center rounded transition-colors duration-200"
               >
-                <span className="block -rotate-90 whitespace-nowrap tracking-wide transition-colors duration-200 group-hover:text-[var(--accent)]">
-                  {link.label}
+                <span className="sr-only">{link.label}</span>
+                <span className="transition-colors duration-200 group-hover:text-[var(--accent)]">
+                  <NavIcon href={link.href} />
                 </span>
                 {/* Animated vertical bar indicator */}
                 <span className="absolute left-1 top-1/2 -translate-y-1/2 h-6 w-1 bg-[var(--accent)] rounded-full scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top" />
