@@ -49,7 +49,7 @@ export default function Home() {
           {/* Tech Stack Badges */}
           <div className="flex flex-wrap gap-4 mt-4">
             {[
-              "Next.js", "JavaScript",  "Git", "Figma", "Photoshop", "Flutter" , "Canva", "Firebase", "Java", "PHP", "SQL"
+              "Next.js", "JavaScript",  "Git", "Figma", "Photoshop", "Flutter" , "Canva", "Firebase", "Java", "PHP", "SQL", "HTML", "CSS", "TailwindCSS", "Shopify"
             ].map((tech) => (
               <span
                 key={tech}
@@ -65,7 +65,50 @@ export default function Home() {
           <Sun3D onClick={toggleTheme} mode={theme} />
         </div>
       </section>
+        {/* Resume + Phone + Location */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 max-w-5xl mx-auto">
+          <a
+            href="/Conde_Resume.pdf"
+            download
+            className="bg-gradient-to-br from-black/60 to-black/40 light:from-white/80 light:to-white/60 rounded-2xl p-8 flex flex-col items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-[var(--accent)]/20 hover:border-[var(--accent)]/40 group h-full"
+          >
+            <span className="mb-6 text-4xl text-[var(--accent)] group-hover:scale-110 transition-transform">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-12 h-12"><path strokeLinecap="round" strokeLinejoin="round" d="M12 16v-8m0 8l-4-4m4 4l4-4M4 20h16a2 2 0 002-2V6a2 2 0 00-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+            </span>
+            <p className="text-xl font-bold mb-2 text-white light:text-black group-hover:text-[var(--accent)] transition-colors">Download Resume</p>
+            <p className="text-sm text-gray-400 light:text-gray-600">Get my latest CV</p>
+          </a>
 
+          <a
+            href="tel:+639063323183"
+            className="bg-gradient-to-br from-black/60 to-black/40 light:from-white/80 light:to-white/60 rounded-2xl p-8 flex flex-col items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-[var(--accent)]/20 hover:border-[var(--accent)]/40 group h-full"
+          >
+            <span className="mb-6 text-4xl text-[var(--accent)] group-hover:scale-110 transition-transform">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-12 h-12">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M2.5 5.5A2 2 0 0 1 4.5 3.5H7a2 2 0 0 1 2 1.6l.5 2.2a2 2 0 0 1-.6 1.9l-1.3 1.2a13.5 13.5 0 0 0 6 6l1.2-1.3a2 2 0 0 1 1.9-.6l2.2.5a2 2 0 0 1 1.6 2V19.5a2 2 0 0 1-2 2H18C9.7 21.5 2.5 14.3 2.5 6V5.5z"
+                />
+              </svg>
+            </span>
+            <p className="text-xl font-bold mb-2 text-white light:text-black group-hover:text-[var(--accent)] transition-colors">+639063323183</p>
+            <p className="text-sm text-gray-400 light:text-gray-600">Call me directly</p>
+          </a>
+          
+          <a
+            href="https://www.google.com/maps/place/Davao+City,+Philippines/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gradient-to-br from-black/60 to-black/40 light:from-white/80 light:to-white/60 rounded-2xl p-8 flex flex-col items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-[var(--accent)]/20 hover:border-[var(--accent)]/40 group h-full"
+          >
+            <span className="mb-6 text-4xl text-[var(--accent)] group-hover:scale-110 transition-transform">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-12 h-12"><path strokeLinecap="round" strokeLinejoin="round" d="M12 21.75c-4.97-4.97-7.5-8.25-7.5-11.25A7.5 7.5 0 0112 3a7.5 7.5 0 017.5 7.5c0 3-2.53 6.28-7.5 11.25z" /><circle cx="12" cy="10.5" r="2.5" /></svg>
+            </span>
+            <p className="text-xl font-bold mb-2 text-white light:text-black group-hover:text-[var(--accent)] transition-colors">Davao City, Philippines</p>
+            <p className="text-sm text-gray-400 light:text-gray-600">My location</p>
+          </a>
+        </div>
       {/* About Section */}
       <AboutSection />
       {/* Experience Section */}

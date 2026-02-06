@@ -2,6 +2,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import ArrowRight from "/public/icons/arrow_rigjt.svg";
+import Live from "/public/icons/demo.svg";
 
 const techs = ["figma"];
 
@@ -29,10 +31,10 @@ export default function ProjectSection() {
             </div>
             <div className="flex gap-4 mt-4">
               <a href="https://www.behance.net/gallery/228110131/Habihouse" className="bg-[var(--accent)] hover:bg-[#6d3bbd] text-white px-6 py-2 rounded-lg font-semibold flex items-center gap-2 shadow transition">
-                View Project <span aria-hidden>→</span>
+                View Project <ArrowRight />
               </a>
               <a href="https://www.figma.com/proto/6Q1qRkfy9ga5C5LbaP4Qdc/Habihouse-improved?node-id=2-7469&t=1O0NKpETfjPZSIXf-1" className="text-[var(--accent)] hover:underline flex items-center gap-2">
-                <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 5v8m0 0l-3-3m3 3l3-3"/><rect x="3" y="3" width="12" height="12" rx="2"/></svg>
+                <Live/>
                 Live Demo
               </a>
             </div>
@@ -70,7 +72,7 @@ export default function ProjectSection() {
             </div>
             <div className="flex gap-4 mt-4">
               <a href="https://www.behance.net/gallery/228106543/TaskOnTrack" className="bg-[var(--accent)] hover:bg-[#6d3bbd] text-white px-6 py-2 rounded-lg font-semibold flex items-center gap-2 shadow transition">
-                View Project <span aria-hidden>→</span>
+                View Project <ArrowRight />
               </a>
             </div>
           </div>
@@ -105,11 +107,11 @@ export default function ProjectSection() {
       </div>
       <div className="flex gap-4 mt-4">
         <a href="https://www.behance.net/gallery/228132847/Cinematheque-Kiosk-Ticketing-System" className="bg-[var(--accent)] hover:bg-[#6d3bbd] text-white px-6 py-2 rounded-lg font-semibold flex items-center gap-2 shadow transition">
-          View Project <span aria-hidden>→</span>
+          View Project <ArrowRight />
         </a>
         {/** Optional live demo */}
         <a href="https://www.figma.com/proto/Us7mPFvg3imyS33FlB4sfK?node-id=0-1&t=kSUDzEJnZWqtNRDq-6" className="text-[var(--accent)] hover:underline flex items-center gap-2">
-          <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 5v8m0 0l-3-3m3 3l3-3"/><rect x="3" y="3" width="12" height="12" rx="2"/></svg>
+           <Live/>
           Live Demo
         </a>
       </div>

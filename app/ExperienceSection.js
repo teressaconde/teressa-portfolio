@@ -23,7 +23,7 @@ const experiences = [
     ],
   },
   {
-    date: "2024 - Present",
+    date: "2024 - 2025",
     title: "Publication Material Editor",
     company: "Freelance | Solumi, Tibungco, Davao City",
     description: [
@@ -33,7 +33,7 @@ const experiences = [
     ],
   },
   {
-    date: "2019 - Present",
+    date: "2019 - 2025",
     title: "Design Editor",
     company: "Dr. Santiago Dakudao Sr. National High School",
     description: [
