@@ -4,6 +4,17 @@ import { motion } from "framer-motion";
 const experiences = [
   {
     date: "2025",
+    title: "Shopify Store Project",
+    position: "Shopify Developer",
+    description: [
+      "Built and customized Shopify store layouts using pre-built themes and custom styling.",
+      "Configured products, collections, payment methods, and shipping settings.",
+      "Optimized storefront layouts for mobile and desktop responsiveness.",
+      "Applied UI/UX principles to improve product visibility and navigation clarity."
+    ],
+  },
+  {
+    date: "2025",
     title: "Front End Developer - Intern",
     company: "Mini Clean Business Solution (Infosoft)",
     description: [
