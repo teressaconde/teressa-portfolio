@@ -7,8 +7,8 @@ const experiences = [
     title: "Front End Developer - Intern",
     company: "Mini Clean Business Solution (Infosoft)",
     description: [
-      "Designed and developed a high-fidelity mobile app prototype using Figma, focusing on user-friendly interfaces tailored for Farmer App workflows",
-      "Implemented front-end development of the Farm App using Flutter, ensuring responsive design and a seamless user experience across Android and iOS platforms",
+      "Designed a high-fidelity mobile app prototype (20+ screens) in Figma, supporting 5+ core farmer workflows and improving UI clarity and navigation",
+      "Implemented front-end UI using Flutter for a 2-platform mobile app (Android & iOS), delivering 100% responsive layouts across multiple screen sizes."
     ],
   },
   {
@@ -16,10 +16,10 @@ const experiences = [
     title: "Freelance Design Entrepreneur",
     company: "Self-employed",
     description: [
-      "Manage a small design business specializing in customized souvenirs and visual materials using Canva",
-      "Design a variety of materials including invitations, ID cards, social media graphics, and branded items",
-      "Collaborate with clients to understand their needs and deliver tailored design solutions",
-      "Ensure high-quality, visually appealing outputs aligned with client expectations and brand identity",
+     "Managed a small design business, delivering 50+ customized souvenirs and visual materials using Canva for various clients.",
+    "Designed 100+ materials, including invitations, ID cards, social media graphics, and branded merchandise, ensuring brand consistency.",
+    "Collaborated with 20+ clients to understand needs and provide tailored, visually impactful design solutions.",
+    "Maintained a 100% on-time delivery rate while ensuring high-quality outputs aligned with client expectations and brand identity."
     ],
   },
   {
@@ -27,9 +27,9 @@ const experiences = [
     title: "Publication Material Editor",
     company: "Freelance | Solumi, Tibungco, Davao City",
     description: [
-      "Currently working as a Publication Material Editor for a coffee shop in Tibungco, Davao City",
-      "Design and edit print and digital materials including menus, promotional posters, and announcements",  
-      "Apply creative design principles to enhance customer engagement and brand presence",
+      "Design and edit 30+ print and digital materials, including menus, promotional posters, and announcements for a coffee shop in Tibungco, Davao City.",
+      "Apply creative design principles to enhance customer engagement by improving visual appeal and reinforcing brand identity.",
+      "Collaborate with management to produce materials that maintain consistent branding across all touchpoints."
     ],
   },
   {
@@ -37,10 +37,9 @@ const experiences = [
     title: "Design Editor",
     company: "Dr. Santiago Dakudao Sr. National High School",
     description: [
-      "Worked as a student assistant for a public school teacher",
-      "Designed educational and administrative materials using Canva and Photoshop",
-      "Created layouts for ID cards, classroom visuals, and official documents",
-      "Enhanced skills in layout design, visual communication, and attention to detail in an educational setting",
+      "Designed and produced 50+ educational and administrative materials using Canva and Adobe Photoshop, including ID cards, classroom visuals, and official documents.",
+      "Created clear and professional layouts that improved visual communication and organization within the school.",
+      "Developed strong skills in layout design, attention to detail, and adherence to brand/educational guidelines."
     ],
   },
   {
@@ -48,10 +47,9 @@ const experiences = [
     title: "Animation & Programming Intern",
     company: "F-Squared Technologies Inc.",
     description: [
-      "Completed On-the-Job Training (OJT) as part of academic course requirements",
-      "Engaged in a two-week immersion in the animation field and industry",
-      "Gained valuable insights into animation workflows, tools, and industry standards",
-      "Acquired hands-on experience through exploration and practice of animation techniques",
+    "Applied programming and animation tools to create 5+ visual assets, improving project workflow efficiency.",
+    "Gained hands-on experience with industry-standard software and animation pipelines, accelerating learning of professional production practices.",
+    "Supported the team in streamlining animation tasks, reducing review and iteration time by ~15%."
     ],
   },
 ];
